@@ -8,9 +8,16 @@ import { Component } from '@angular/core';
 export class RollDiceComponent {
   dice1: number | null = null;
   dice2: number | null = null;
+  isRolling: boolean = false;
 
   rollDice() {
-    this.dice1 = Math.floor(Math.random() * 6) + 1;
-    this.dice2 = Math.floor(Math.random() * 6) + 1;
+    this.isRolling = true;
+
+    // Simulate dice rolling with random animations
+    setTimeout(() => {
+      this.dice1 = Math.floor(Math.random() * 6) + 1;
+      this.dice2 = Math.floor(Math.random() * 6) + 1;
+      this.isRolling = false;
+    }, 1000); // Animation duration: 1 second
   }
 }

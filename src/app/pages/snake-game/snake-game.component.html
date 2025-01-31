@@ -1,1 +1,38 @@
-<p>snake-game works!</p>
+<h2>Snake Game</h2>
+
+<!-- Game Container with a flex layout -->
+<div class="game-layout">
+  <!-- Instructions Section -->
+  <div class="instructions">
+    <h3>How to Play</h3>
+    <p>
+      Use the arrow keys (<kbd>↑</kbd>, <kbd>↓</kbd>, <kbd>←</kbd>, <kbd>→</kbd>) to control the snake.
+      Eat the red food to grow the snake and increase your score. Avoid hitting the walls or yourself!
+    </p>
+  </div>
+
+  <!-- Game Area -->
+  <div class="game-container">
+    <div class="grid" *ngFor="let row of [].constructor(gridSize); let y = index">
+      <div
+        class="cell"
+        *ngFor="let col of [].constructor(gridSize); let x = index"
+        [ngClass]="{
+          'snake': isSnakeSegment(x, y),
+          'food': food.x === x && food.y === y
+        }"
+      ></div>
+    </div>
+  </div>
+
+  <!-- Score Board -->
+  <div class="score-board">
+    <p>Score: {{ score }}</p>
+    <p>Top Score: {{ topScore }}</p>
+    <h4>Score History</h4>
+    <ul>
+      <li *ngFor="let pastScore of scoreHistory">{{ pastScore }}</li>
+    </ul>
+    <button mat-raised-button color="primary" (click)="restartGame()">Restart Game</button>
+  </div>
+</div>

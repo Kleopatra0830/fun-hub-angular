@@ -1,14 +1,9 @@
-<!-- Navigation Header -->
+<!-- Main content starts here -->
 <header>
   <h1>Fun Hub</h1>
 </header>
 
-<!-- Router Outlet to render pages based on the route -->
-<main>
-  <router-outlet></router-outlet>
-</main>
-
-<!-- Navigation Bar -->
+<!-- Navigation Bar at the top -->
 <nav>
   <a routerLink="/" routerLinkActive="active">🏠 Home</a>
   <a routerLink="/roll-dice" routerLinkActive="active">🎲 Roll Dice</a>
@@ -19,7 +14,10 @@
   <a routerLink="/currency-converter" routerLinkActive="active">💱 Currency Converter</a>
 </nav>
 
-<!-- Footer -->
+<main>
+  <router-outlet></router-outlet>
+</main>
+
 <footer>
-  <p>Fun Hub &copy; 2025</p>
+  <p>Sherry Wu &copy; 2025</p>
 </footer>

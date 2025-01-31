@@ -1,1 +1,58 @@
-<p>trivia-quiz works!</p>
+<h2>Trivia Quiz</h2>
+
+<!-- Quiz Settings -->
+<div class="quiz-settings" *ngIf="!quizStarted">
+  <h3>Choose Category and Difficulty</h3>
+
+  <label for="category">Category:</label>
+  <select id="category" [(ngModel)]="selectedCategory">
+    <option *ngFor="let category of categories" [value]="category.id">{{ category.name }}</option>
+  </select>
+
+  <label for="difficulty">Difficulty:</label>
+  <select id="difficulty" [(ngModel)]="selectedDifficulty">
+    <option *ngFor="let level of difficultyLevels" [value]="level">{{ level }}</option>
+  </select>
+
+  <button mat-raised-button color="primary" (click)="startQuiz()">Start Quiz</button>
+</div>
+
+<!-- Quiz Questions -->
+<div *ngIf="quizStarted && !quizCompleted">
+  <div class="question-container">
+    <p [innerHTML]="questions[currentQuestionIndex].question"></p>
+
+    <div class="options">
+      <button
+        *ngFor="let option of questions[currentQuestionIndex].options"
+        (click)="selectAnswer(option)"
+        [disabled]="!!questions[currentQuestionIndex].selectedAnswer"
+        [ngClass]="{
+          'correct': questions[currentQuestionIndex].selectedAnswer && option === questions[currentQuestionIndex].correct_answer,
+          'wrong': questions[currentQuestionIndex].selectedAnswer === option && option !== questions[currentQuestionIndex].correct_answer
+        }"
+      >
+        {{ option }}
+      </button>
+    </div>
+  </div>
+</div>
+
+<!-- Quiz Completion Message and Review Section -->
+<div *ngIf="quizCompleted">
+  <h3>Quiz Completed!</h3>
+  <p>Your Score: {{ score }}</p>
+  <h4>Review Questions</h4>
+
+  <div *ngFor="let question of questions" class="review-question">
+    <p [innerHTML]="question.question"></p>
+    <p>Your Answer: 
+      <span [ngClass]="{ 'correct': question.selectedAnswer === question.correct_answer, 'wrong': question.selectedAnswer !== question.correct_answer }">
+        {{ question.selectedAnswer }}
+      </span>
+    </p>
+    <p>Correct Answer: {{ question.correct_answer }}</p>
+  </div>
+
+  <button mat-raised-button color="primary" (click)="restartQuiz()">Restart Quiz</button>
+</div>

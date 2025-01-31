@@ -1,0 +1,6 @@
+<h2>Roll the Dice</h2>
+<button mat-raised-button color="primary" (click)="rollDice()">Roll Dice</button>
+<div *ngIf="dice1 !== null && dice2 !== null" class="dice-display">
+  <p>Dice 1: {{ dice1 }}</p>
+  <p>Dice 2: {{ dice2 }}</p>
+</div>

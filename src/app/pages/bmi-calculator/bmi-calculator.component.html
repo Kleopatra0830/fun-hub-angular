@@ -1,0 +1,14 @@
+<h2>BMI Calculator</h2>
+<form>
+  <mat-form-field>
+    <input matInput placeholder="Height (cm)" type="number" [(ngModel)]="height" name="height">
+  </mat-form-field>
+  <mat-form-field>
+    <input matInput placeholder="Weight (kg)" type="number" [(ngModel)]="weight" name="weight">
+  </mat-form-field>
+  <button mat-raised-button color="primary" (click)="calculateBMI()">Calculate BMI</button>
+</form>
+<div *ngIf="bmi !== null">
+  <p>Your BMI: {{ bmi | number: '1.1-1' }}</p>
+  <p>Category: {{ category }}</p>
+</div>

@@ -131,19 +131,22 @@ Each page has a corresponding Angular component for functionality and UI. Here's
 ## **Screenshots**
 
 1. **Main Page:**
-   ![Main Page](screenshots/main-page.png)
+<img width="1277" alt="Screenshot 2025-01-31 at 3 41 39 PM" src="https://github.com/user-attachments/assets/18d6971b-acf6-438a-886b-5df2d0fd21f2" />
 
 2. **Roll Dice Page:**
-   ![Roll Dice](screenshots/roll-dice.png)
+<img width="1040" alt="Screenshot 2025-01-31 at 3 41 56 PM" src="https://github.com/user-attachments/assets/15aa9735-3fc3-4c0e-8769-0fe510930ff6" />
 
 3. **BMI Calculator Page:**
-   ![BMI Calculator](screenshots/bmi-calculator.png)
+<img width="1081" alt="Screenshot 2025-01-31 at 3 42 16 PM" src="https://github.com/user-attachments/assets/9a5f3ff3-7b75-4e2a-a6ec-79e55ad4ce24" />
 
 4. **Snake Game Page:**
-   ![Snake Game](screenshots/snake-game.png)
+<img width="1431" alt="Screenshot 2025-01-31 at 3 43 14 PM" src="https://github.com/user-attachments/assets/b63b09f1-269f-4b0c-bc4b-b65d8eef8de9" />
 
 5. **Trivia Quiz Page:**
-   ![Trivia Quiz](screenshots/trivia-quiz.png)
+<img width="1103" alt="Screenshot 2025-01-31 at 3 43 41 PM" src="https://github.com/user-attachments/assets/098bf3ac-09e1-4a4f-8d1b-5d42009eeedd" />
+<img width="888" alt="Screenshot 2025-01-31 at 3 44 43 PM" src="https://github.com/user-attachments/assets/72ac7fd0-d7a9-43e3-9674-58805685fc6e" />
+<img width="1024" alt="Screenshot 2025-01-31 at 3 44 32 PM" src="https://github.com/user-attachments/assets/79ed1c2f-9069-4ed5-9ece-89ed535cdb7e" />
+
 
 6. **Stopwatch Page:**
    ![Stopwatch](screenshots/stopwatch.png)

@@ -1,0 +1,16 @@
+<h2>Tetris</h2>
+<div class="game-container">
+  <div class="grid">
+    <div
+      *ngFor="let cell of grid; let i = index"
+      [ngClass]="{
+        'filled': cell,
+        'empty': !cell
+      }"
+    ></div>
+  </div>
+  <div class="controls">
+    <button (click)="startGame()">Start Game</button>
+    <p>Score: {{ score }}</p>
+  </div>
+</div>
